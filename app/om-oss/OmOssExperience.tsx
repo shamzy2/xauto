@@ -11,7 +11,7 @@ import styles from "./OmOss.module.css";
 
 const facts = [
   {
-    value: "AAA",
+    value: "AAA-rating",
     label: "Høyeste kredittverdighet",
     icon: "rating" as const,
   },
