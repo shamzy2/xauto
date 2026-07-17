@@ -60,9 +60,8 @@ export function HomeAbout() {
             merkes når nøklene overleveres til en fornøyd kunde.
           </p>
           <p>
-            Du finner oss på Fetsund i Lillestrøm kommune, med et 1000
-            kvadratmeter stort utstillingslokale. Kom innom for en hyggelig
-            bilprat.
+            Du finner oss på Fetsund i Lillestrøm kommune. Kom innom for en
+            hyggelig bilprat.
           </p>
         </div>
       </div>

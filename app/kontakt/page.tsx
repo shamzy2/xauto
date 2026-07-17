@@ -31,9 +31,10 @@ export default function KontaktPage() {
           <div className={styles.contactGrid}>
             <section className={styles.contactPanel} aria-label="Kontaktskjema og kontaktinfo">
               <div className={styles.formWrap}>
-                <h2 className={styles.panelTitle}>Send oss en henvendelse</h2>
+                <h2 className={styles.panelTitle}>Tvil ikke, vi elsker spørsmål!</h2>
                 <p className={styles.panelLead}>
-                  Fyll ut skjemaet, så åpnes e-posten ferdig utfylt og klar til sending.
+                  Send oss en henvendelse ved å fylle ut skjema nedenfor og fortell oss hva
+                  du lurer på.
                 </p>
                 <KontaktForm />
               </div>

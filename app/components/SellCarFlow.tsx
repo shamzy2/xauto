@@ -24,7 +24,6 @@ import { clearSellSteg3Draft } from "@/app/lib/sellSteg3Storage";
 import { readJsonResponseBody } from "@/app/lib/readJsonResponseBody";
 import { useScrollIntoViewWhen } from "@/app/lib/useScrollIntoViewWhen";
 import { clearSellSkadeSessionStorage } from "@/app/lib/sellSkadeStorage";
-import { SellEnkeltOgTrygt } from "./SellEnkeltOgTrygt";
 import { SellHowItWorks } from "./SellHowItWorks";
 import { useSellFlowRoute } from "./SellFlowRouteContext";
 import { useSellSelgFooterBridge } from "./SellSelgFooterBridge";
@@ -233,9 +232,6 @@ export function SellCarHero() {
 
       <div className={styles.howItWorksBelowReg}>
         <SellHowItWorks />
-      </div>
-      <div className={styles.faqBelowSellSteps}>
-        <SellEnkeltOgTrygt />
       </div>
     </section>
   );

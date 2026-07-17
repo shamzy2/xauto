@@ -41,7 +41,7 @@ const aboutPoints = [
   {
     n: "03",
     title: "Besøk oss",
-    body: "Du finner oss på Fetsund i Lillestrøm kommune, med et 1000 kvadratmeter stort utstillingslokale. Kom innom for en hyggelig bilprat.",
+    body: "Du finner oss på Fetsund i Lillestrøm kommune. Kom innom for en hyggelig bilprat.",
   },
 ] as const;
 
@@ -166,8 +166,6 @@ export function OmOssExperience() {
 
           <p className={styles.aboutMeta}>
             <span>{site.address.formatted}</span>
-            <span className={styles.aboutMetaDot} aria-hidden />
-            <span>1000 kvm utstilling</span>
           </p>
         </div>
       </section>

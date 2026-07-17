@@ -7,6 +7,7 @@ import showcase from "@/app/showcase.module.css";
 
 import { VareBilerFinn } from "./VareBilerFinn";
 import { VareBilerHero } from "./VareBilerHero";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Våre biler",
@@ -20,7 +21,14 @@ export default function VareBilerPage() {
       <Menu />
       <section className={`${showcase.subHero} ${showcase.subHeroUnderNav}`} aria-labelledby="vare-biler-title">
         <div className={showcase.subHeroBg}>
-          <Image src="/i1.avif" alt="" fill sizes="100vw" priority />
+          <Image
+            src="/lambo.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            priority
+            className={styles.heroImg}
+          />
         </div>
         <div className={showcase.subHeroShade} aria-hidden />
         <div className={showcase.subHeroInner}>

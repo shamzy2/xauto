@@ -24,7 +24,6 @@ import { clearSellDekkDraft } from "@/app/lib/sellDekkStorage";
 import { clearSellSteg3Draft } from "@/app/lib/sellSteg3Storage";
 import { clearSellSkadeSessionStorage } from "@/app/lib/sellSkadeStorage";
 import { useScrollIntoViewWhen } from "@/app/lib/useScrollIntoViewWhen";
-import { SellEnkeltOgTrygt } from "./SellEnkeltOgTrygt";
 import { SellHowItWorks } from "./SellHowItWorks";
 import { useSellFlowRoute } from "./SellFlowRouteContext";
 import { useSellSelgFooterBridge } from "./SellSelgFooterBridge";
@@ -231,9 +230,6 @@ export function InnbytteCarHero() {
 
       <div className={styles.howItWorksBelowReg}>
         <SellHowItWorks variant="innbytte" />
-      </div>
-      <div className={styles.faqBelowSellSteps}>
-        <SellEnkeltOgTrygt scope="innbytteHero" />
       </div>
     </section>
   );
