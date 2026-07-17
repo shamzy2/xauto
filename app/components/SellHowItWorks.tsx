@@ -58,7 +58,7 @@ export function SellHowItWorks({ variant = "sell" }: Props) {
       <div className={styles.inner}>
         <header className={styles.header}>
           <h2 id={headingId} className={styles.title}>
-            {variant === "innbytte" ? "Trygt innbytte hos X Bilsenter" : "Selg bilen din hos X Bilsenter"}
+            {variant === "innbytte" ? "Trygt innbytte hos X Auto" : "Selg bilen din hos X Auto"}
           </h2>
           <p className={styles.subtitle}>
             {variant === "innbytte"

@@ -6,7 +6,7 @@ import { TJENESTER_SECTIONS } from "./tjenester-sections";
 export const metadata: Metadata = {
   title: "Andre tjenester",
   description:
-    "Solfilm, detailing, lakkforsegling og klargjøring hos X Bilsenter på Fetsund. Ta kontakt for pristilbud.",
+    "Solfilm, detailing, lakkforsegling og klargjøring hos X Auto på Fetsund. Ta kontakt for pristilbud.",
 };
 
 export default function TjenesterPage() {

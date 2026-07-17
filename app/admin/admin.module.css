@@ -67,7 +67,7 @@
 .adminNavLinkActive {
   background: #fff;
   color: var(--accent);
-  border-color: rgb(188 20 24 / 0.25);
+  border-color: rgb(234 160 56 / 0.25);
   box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
 }
 
@@ -157,7 +157,7 @@
 }
 
 .badgeNew {
-  background: rgb(188 20 24 / 0.12);
+  background: rgb(234 160 56 / 0.12);
   color: var(--accent);
 }
 
@@ -244,14 +244,14 @@
   margin-top: 24px;
   padding: 8px 14px;
   border-radius: 8px;
-  border: 1px solid rgb(185 28 28 / 0.4);
+  border: 1px solid rgb(234 160 56 / 0.4);
   background: #fff;
-  color: rgb(185 28 28);
+  color: rgb(234 160 56);
   cursor: pointer;
 }
 
 .carDeleteBtn:hover:not(:disabled) {
-  background: rgb(254 242 242);
+  background: rgb(252 244 230);
 }
 
 .carDeleteBtn:disabled {
@@ -432,7 +432,7 @@
   border-radius: 12px;
   background: linear-gradient(
     135deg,
-    rgb(188 20 24 / 0.08) 0%,
+    rgb(234 160 56 / 0.08) 0%,
     rgb(10 15 24 / 0.04) 100%
   );
   border: 1px solid rgb(10 15 24 / 0.08);
@@ -487,7 +487,7 @@
   justify-content: center;
   padding: 10px 16px;
   border-radius: 10px;
-  border: 1px solid rgb(188 20 24 / 0.35);
+  border: 1px solid rgb(234 160 56 / 0.35);
   background: #fff;
   color: var(--accent);
   font-weight: 600;
@@ -692,8 +692,8 @@
   border-radius: 999px;
   font-size: 0.8125rem;
   font-weight: 600;
-  background: rgb(220 38 38 / 0.1);
-  color: rgb(153 27 27);
+  background: rgb(234 160 56 / 0.1);
+  color: rgb(184 120 30);
 }
 
 .photoGridLarge {
@@ -814,7 +814,7 @@
 .adminNotesErr {
   font-size: 0.875rem;
   font-weight: 600;
-  color: rgb(185 28 28);
+  color: rgb(234 160 56);
 }
 
 .ctaNotat {
@@ -874,10 +874,10 @@
   padding: 18px 20px;
   border-radius: 12px;
   background: #fff;
-  border: 1px solid rgb(188 20 24 / 0.12);
+  border: 1px solid rgb(234 160 56 / 0.12);
   box-shadow:
     0 1px 0 rgb(255 255 255 / 0.9) inset,
-    0 4px 20px rgb(188 20 24 / 0.06);
+    0 4px 20px rgb(234 160 56 / 0.06);
 }
 
 .notesSavedLabel {
@@ -912,7 +912,7 @@
   font: inherit;
   padding: 8px 16px;
   border-radius: 8px;
-  border: 1px solid rgb(188 20 24 / 0.35);
+  border: 1px solid rgb(234 160 56 / 0.35);
   background: #fff;
   color: var(--accent);
   font-weight: 600;
@@ -947,8 +947,8 @@
 
 .notesEditTextarea:focus {
   outline: none;
-  border-color: rgb(188 20 24 / 0.45);
-  box-shadow: 0 0 0 3px rgb(188 20 24 / 0.12);
+  border-color: rgb(234 160 56 / 0.45);
+  box-shadow: 0 0 0 3px rgb(234 160 56 / 0.12);
 }
 
 .notesEditFooter {
@@ -1084,5 +1084,5 @@
 .formError {
   margin: 0;
   font-size: 0.875rem;
-  color: rgb(185 28 28);
+  color: rgb(234 160 56);
 }

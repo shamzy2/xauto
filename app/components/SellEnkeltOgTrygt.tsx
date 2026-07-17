@@ -32,30 +32,6 @@ const faqItemsSellHero: FaqItem[] = [
   },
 ];
 
-/** Kun forsiden — generelle spørsmål om handel hos oss. */
-const faqItemsHome: FaqItem[] = [
-  {
-    q: "Kan dere hjelpe med transport av bilen?",
-    a: "Vi tilbyr transport over store deler av Norge dersom du ikke har mulighet til å hente bilen selv. Ta kontakt med oss, så finner vi en løsning som passer deg til en fornuftig pris.",
-  },
-  {
-    q: "Kan jeg få hjelp med finansiering?",
-    a: "Vi samarbeider med finansieringsselskaper og kan tilby løsninger tilpasset din økonomi. Du får rask avklaring og tydelige vilkår før du bestemmer deg.",
-  },
-  {
-    q: "Tilbyr dere garanti på bilene deres?",
-    a: "Vi tilbyr bruktbilgaranti på flere av våre biler, slik at du får en ekstra trygghet etter kjøpet. Ta kontakt med oss for å få vite hva som gjelder for den aktuelle bilen.",
-  },
-  {
-    q: "Kan dere ordne forsikring for meg?",
-    a: "Vi kan hjelpe deg med å få på plass forsikring før du henter bilen. Dette gjør at du kan kjøre trygt fra første stund, uten å måtte ordne dette selv i etterkant.",
-  },
-  {
-    q: "Hvordan fungerer registrering av bilen?",
-    a: "Som godkjent forhandler kan vi registrere bilen direkte, ofte samme dag som du henter den. Dette gjør prosessen rask og enkel, slik at du kan kjøre hjem uten forsinkelser.",
-  },
-];
-
 /** Under /innbytte-hero. */
 const faqItemsInnbytteHero: FaqItem[] = [
   {
@@ -89,10 +65,10 @@ const faqItemsInnbytteHero: FaqItem[] = [
   },
 ];
 
-export type SellEnkeltOgTrygtScope = "home" | "sellHero" | "innbytteHero";
+export type SellEnkeltOgTrygtScope = "sellHero" | "innbytteHero";
 
 type Props = {
-  /** `home` = forsiden. `sellHero` = under /selg. `innbytteHero` = under /innbytte. */
+  /** `sellHero` = under /selg. `innbytteHero` = under /innbytte. */
   scope?: SellEnkeltOgTrygtScope;
   tone?: "light" | "dark";
 };
@@ -110,7 +86,7 @@ function ChevronDown({ className }: { className?: string }) {
     >
       <path
         d="M2 6L9.85858 13.8586C9.93668 13.9367 10.0633 13.9367 10.1414 13.8586L18 6"
-        stroke="#BC1418"
+        stroke="#EAA038"
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -119,7 +95,6 @@ function ChevronDown({ className }: { className?: string }) {
 }
 
 function faqForScope(scope: SellEnkeltOgTrygtScope): FaqItem[] {
-  if (scope === "home") return faqItemsHome;
   if (scope === "innbytteHero") return faqItemsInnbytteHero;
   return faqItemsSellHero;
 }

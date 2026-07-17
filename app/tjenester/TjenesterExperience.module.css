@@ -4,6 +4,15 @@
   color: var(--foreground);
 }
 
+.heroShade {
+  background: linear-gradient(
+    180deg,
+    rgb(0 0 0 / 0.45) 0%,
+    rgb(0 0 0 / 0.72) 55%,
+    rgb(0 0 0 / 0.82) 100%
+  );
+}
+
 .heroActions {
   display: flex;
   flex-wrap: wrap;

@@ -6,6 +6,7 @@
 }
 
 .onLight {
+  /* Lys bakgrunn (admin): gjør hvit tekst sort */
   filter: brightness(0);
 }
 

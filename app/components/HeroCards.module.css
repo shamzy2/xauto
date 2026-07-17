@@ -43,10 +43,10 @@
 
 .cardGradient {
   background:
-    radial-gradient(100% 90% at 100% 0%, rgb(188 20 24 / 10%) 0%, transparent 52%),
+    radial-gradient(100% 90% at 100% 0%, rgb(234 160 56 / 10%) 0%, transparent 52%),
     linear-gradient(155deg, rgb(255 255 255 / 0.92) 0%, rgb(255 255 255 / 0.35) 48%, transparent 72%),
-    linear-gradient(73deg, rgb(188 20 24 / 5%) 0%, rgb(188 20 24 / 9%) 100%);
-  border: 1px solid rgb(188 20 24 / 16%);
+    linear-gradient(73deg, rgb(234 160 56 / 5%) 0%, rgb(234 160 56 / 9%) 100%);
+  border: 1px solid rgb(234 160 56 / 16%);
   box-shadow:
     0 1px 0 rgb(255 255 255 / 0.95) inset,
     0 0 0 1px rgb(255 255 255 / 0.35) inset,
@@ -55,11 +55,11 @@
 }
 
 .cardGradient:hover {
-  border-color: rgb(188 20 24 / 26%);
+  border-color: rgb(234 160 56 / 26%);
   box-shadow:
     0 1px 0 rgb(255 255 255 / 1) inset,
     0 0 0 1px rgb(255 255 255 / 0.5) inset,
-    0 4px 12px -4px rgb(188 20 24 / 9%),
+    0 4px 12px -4px rgb(234 160 56 / 9%),
     0 22px 50px -20px rgb(15 23 42 / 13%);
 }
 
@@ -72,7 +72,7 @@
   max-width: none;
   background:
     radial-gradient(90% 70% at 12% 8%, rgb(255 255 255 / 14%) 0%, transparent 45%),
-    linear-gradient(155deg, #c8161a 0%, var(--accent) 55%, #9e1014 100%);
+    linear-gradient(155deg, #f0b04a 0%, var(--accent) 55%, #c97e22 100%);
   padding: 18px 20px;
   display: flex;
   align-items: stretch;
@@ -81,8 +81,8 @@
   box-shadow:
     0 1px 0 rgb(255 255 255 / 22%) inset,
     0 0 0 1px rgb(0 0 0 / 8%) inset,
-    0 10px 32px -10px rgb(188 20 24 / 48%),
-    0 24px 48px -20px rgb(90 14 18 / 35%);
+    0 10px 32px -10px rgb(234 160 56 / 48%),
+    0 24px 48px -20px rgb(120 80 20 / 35%);
 }
 
 .cardSelg:hover {
@@ -91,8 +91,8 @@
   box-shadow:
     0 1px 0 rgb(255 255 255 / 22%) inset,
     0 0 0 1px rgb(0 0 0 / 8%) inset,
-    0 10px 32px -10px rgb(188 20 24 / 48%),
-    0 24px 48px -20px rgb(90 14 18 / 35%);
+    0 10px 32px -10px rgb(234 160 56 / 48%),
+    0 24px 48px -20px rgb(120 80 20 / 35%);
 }
 
 .selgCopy {

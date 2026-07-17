@@ -22,11 +22,11 @@ import { vegvesenAdminSummaryFromPayload } from "./vegvesenAdminSummary";
 
 export type PdfImagePart = { base64: string; format: "JPEG" | "PNG" };
 
-/** Palett tilpasset admin / nettside (navy, accent #bc1418, skade-rødt). */
+/** Palett tilpasset admin / nettside (navy, accent #eaa038, skade-rødt). */
 const COL = {
   navy: [10, 28, 54] as [number, number, number],
-  accent: [188, 20, 24] as [number, number, number],
-  accentSoft: [252, 236, 236] as [number, number, number],
+  accent: [234, 160, 56] as [number, number, number],
+  accentSoft: [252, 244, 230] as [number, number, number],
   white: [255, 255, 255] as [number, number, number],
   text: [15, 23, 42] as [number, number, number],
   muted: [100, 104, 112] as [number, number, number],
@@ -35,8 +35,8 @@ const COL = {
   mapBg: [246, 247, 249] as [number, number, number],
   zoneIdleFill: [255, 255, 255] as [number, number, number],
   zoneIdleBorder: [175, 180, 192] as [number, number, number],
-  zoneMarkFill: [254, 226, 226] as [number, number, number],
-  zoneMarkBorder: [185, 28, 28] as [number, number, number],
+  zoneMarkFill: [252, 244, 230] as [number, number, number],
+  zoneMarkBorder: [234, 160, 56] as [number, number, number],
   footerGray: [140, 144, 152] as [number, number, number],
 };
 
@@ -294,8 +294,8 @@ export function buildSellSubmissionPdf(
   );
   doc.text(
     isInnbytte
-      ? "X Bilsenter · Innbytte-innsending"
-      : "X Bilsenter · Salgsinnsending",
+      ? "X Auto · Innbytte-innsending"
+      : "X Auto · Salgsinnsending",
     margin,
     14,
   );

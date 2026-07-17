@@ -19,7 +19,6 @@ const navItems = [
 const utilityLinks = [
   { href: "/kontakt", label: "Kontakt" },
   { href: "/selg", label: "Selg bilen" },
-  { href: "/vare-biler", label: "Lager" },
 ] as const;
 
 const MOBILE_MQ = "(max-width: 900px)";
@@ -48,7 +47,7 @@ export function Menu({ tone = "auto" }: MenuProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const panelId = useId().replace(/:/g, "");
-  const logoClipId = `${useId().replace(/:/g, "")}-xbilsenter-logo-clip`;
+  const logoClipId = `${useId().replace(/:/g, "")}-xauto-logo-clip`;
   const mobileMenuLogoClipId = `${useId().replace(/:/g, "")}-mnav-logo-clip`;
 
   const resolvedTone =
@@ -158,7 +157,7 @@ export function Menu({ tone = "auto" }: MenuProps) {
                   href="/"
                   className={styles.mobileLogo}
                   onClick={closeMenu}
-                  aria-label="X Bilsenter, hjem"
+                  aria-label="X Auto, hjem"
                 >
                   <BrandLogo clipPathId={mobileMenuLogoClipId} variant="onDark" />
                 </Link>
@@ -261,7 +260,7 @@ export function Menu({ tone = "auto" }: MenuProps) {
 
         <div className={mainBarClass}>
           <div className={styles.mainInner}>
-            <Link href="/" className={styles.logo} aria-label="X Bilsenter, hjem">
+            <Link href="/" className={styles.logo} aria-label="X Auto, hjem">
               <BrandLogo clipPathId={logoClipId} variant="onDark" />
             </Link>
 

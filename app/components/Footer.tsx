@@ -25,13 +25,13 @@ export function Footer() {
       <div className={styles.body}>
         <div className={styles.top}>
           <div className={styles.brandBlock}>
-            <Link href="/" className={styles.logoLink} aria-label="X Bilsenter, hjem">
+            <Link href="/" className={styles.logoLink} aria-label="X Auto, hjem">
               <Image
                 className={styles.logo}
-                src="/x-logo.png"
+                src="/xauto.svg"
                 alt=""
-                width={920}
-                height={100}
+                width={1967}
+                height={560}
                 sizes="(max-width: 900px) 180px, 240px"
               />
             </Link>
@@ -110,7 +110,7 @@ export function Footer() {
             </li>
           </ul>
           <p className={styles.copyright}>
-            © X Bilsenter AS {year}
+            © X Auto AS {year}
             <span aria-hidden="true"> · </span>
             Levert av{" "}
             <a href="https://kynetic.no" className={styles.creditLink} target="_blank" rel="noopener noreferrer">

@@ -1,7 +1,8 @@
+import { HomeAbout } from "./components/HomeAbout";
 import { HomeHero } from "./components/HomeHero";
 import { HomeServices } from "./components/HomeServices";
+import { HomeSocialProof } from "./components/HomeSocialProof";
 import { Menu } from "./components/Menu";
-import { SellEnkeltOgTrygt } from "./components/SellEnkeltOgTrygt";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -10,7 +11,8 @@ export default function Home() {
       <Menu />
       <HomeHero />
       <HomeServices />
-      <SellEnkeltOgTrygt scope="home" />
+      <HomeAbout />
+      <HomeSocialProof />
     </div>
   );
 }

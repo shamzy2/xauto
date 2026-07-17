@@ -50,7 +50,7 @@ export function SubmissionPdfButton({
         {busy ? "Genererer PDF…" : label}
       </button>
       {err ? (
-        <span style={{ fontSize: 13, color: "rgb(185 28 28)" }}>{err}</span>
+        <span style={{ fontSize: 13, color: "rgb(234 160 56)" }}>{err}</span>
       ) : null}
     </div>
   );

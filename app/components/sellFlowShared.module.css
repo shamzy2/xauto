@@ -1,4 +1,4 @@
-/* Dinbil-inspirert salgs-/innbytte-flyt — lys base, X Bilsenter rød */
+/* Dinbil-inspirert salgs-/innbytte-flyt — lys base, X Auto rød */
 
 .flowShell {
   box-sizing: border-box;
@@ -49,11 +49,11 @@
 
 .errorCard {
   padding: 1rem 1.25rem;
-  border: 1px solid rgb(188 20 24 / 0.28);
+  border: 1px solid rgb(234 160 56 / 0.28);
   border-radius: 14px;
-  background: rgb(188 20 24 / 0.06);
+  background: rgb(234 160 56 / 0.06);
   font-size: 14px;
-  color: #b91c1c;
+  color: #eaa038;
 }
 
 .flowFormCard {
@@ -218,7 +218,7 @@
 .formError {
   margin: 0.75rem 0 0;
   font-size: 14px;
-  color: #dc2626;
+  color: #eaa038;
 }
 
 .sectionTitle {
@@ -299,7 +299,7 @@
 }
 
 .radioOption:hover {
-  border-color: rgb(188 20 24 / 0.35);
+  border-color: rgb(234 160 56 / 0.35);
 }
 
 .radioOption:has(input:checked) {
@@ -440,7 +440,7 @@
   align-self: flex-start;
   margin-top: 0.85rem;
   padding: 0.55rem 1rem;
-  border: 1px solid rgb(188 20 24 / 0.35);
+  border: 1px solid rgb(234 160 56 / 0.35);
   border-radius: 999px;
   background: var(--accent-soft);
   font-family: inherit;
@@ -454,8 +454,8 @@
 }
 
 .expandBtn:hover {
-  background: rgb(188 20 24 / 0.14);
-  border-color: rgb(188 20 24 / 0.5);
+  background: rgb(234 160 56 / 0.14);
+  border-color: rgb(234 160 56 / 0.5);
 }
 
 .expandBtn[aria-expanded="true"] {
@@ -585,8 +585,8 @@
   height: 3.25rem;
   margin: 0 auto;
   border-radius: 999px;
-  border: 1px solid rgb(188 20 24 / 0.35);
-  background: rgb(188 20 24 / 0.08);
+  border: 1px solid rgb(234 160 56 / 0.35);
+  background: rgb(234 160 56 / 0.08);
   color: var(--accent);
 }
 

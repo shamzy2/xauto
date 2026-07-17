@@ -1,0 +1,219 @@
+/* Kundebobler + partnere — layout som referanse, X Auto-gull */
+
+.band {
+  box-sizing: border-box;
+  width: 100%;
+  padding: clamp(56px, 8vw, 88px) 0 clamp(48px, 6vw, 72px);
+  background: var(--accent);
+  color: #fff;
+}
+
+.inner {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--layout-shell-max);
+  margin: 0 auto;
+  padding-inline: var(--layout-pad-x);
+}
+
+.reviewsHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: clamp(40px, 6vw, 56px);
+  text-align: center;
+}
+
+.reviewsTitle {
+  margin: 0;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.titleRule {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: #fff;
+}
+
+.bubbles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 36px);
+  align-items: center;
+  margin-bottom: clamp(56px, 8vw, 80px);
+}
+
+.bubbleItem {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.bubbleLeft {
+  align-self: end;
+  padding-bottom: 8%;
+}
+
+.bubbleMid {
+  align-self: start;
+  padding-top: 4%;
+}
+
+.bubbleRight {
+  align-self: center;
+  padding-top: 12%;
+}
+
+.bubble {
+  position: relative;
+  margin: 0;
+  padding: 1.35rem 1.4rem 1.5rem;
+  background: var(--accent-hover);
+  color: #fff;
+  border: none;
+}
+
+.bubble p {
+  margin: 0;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.55;
+  color: #fff;
+}
+
+.tailDown::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  bottom: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 12px solid var(--accent-hover);
+}
+
+.tailUp::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 12px solid var(--accent-hover);
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 4px;
+}
+
+.captionAbove {
+  padding-left: 4px;
+}
+
+.author {
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  font-style: normal;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  color: #fff;
+}
+
+/* Partners */
+.partners {
+  padding-top: clamp(36px, 5vw, 48px);
+  border-top: 1px solid rgb(255 255 255 / 0.35);
+}
+
+.partnersHead {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 1.75rem;
+}
+
+.partnersTitle {
+  margin: 0;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.partnerList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.75rem;
+  align-items: center;
+}
+
+.partnerList li {
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.92;
+}
+
+@media (max-width: 899px) {
+  .bubbles {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .bubbleLeft,
+  .bubbleMid,
+  .bubbleRight {
+    align-self: stretch;
+    padding: 0;
+  }
+
+  .bubbleRight {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 14px;
+  }
+
+  .bubbleRight .bubble::before {
+    display: none;
+  }
+
+  .bubbleRight .bubble::after {
+    content: "";
+    position: absolute;
+    left: 28px;
+    bottom: -10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 12px solid var(--accent-hover);
+  }
+}

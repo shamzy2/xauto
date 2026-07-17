@@ -6,6 +6,7 @@ import { useMemo, useState } from "react";
 
 import { Menu } from "@/app/components/Menu";
 import showcase from "@/app/showcase.module.css";
+import { site } from "@/lib/siteContent";
 
 import type { TjenesteSection } from "./tjenester-sections";
 import styles from "./TjenesterExperience.module.css";
@@ -28,14 +29,14 @@ export function TjenesterExperience({ sections }: Props) {
       <section className={`${showcase.subHero} ${showcase.subHeroUnderNav}`} aria-labelledby="tjenester-title">
         <div className={showcase.subHeroBg}>
           <Image
-            src="/bilder/hero/andretjenester.jpg"
+            src="/amg.webp"
             alt=""
             fill
             sizes="100vw"
             priority
           />
         </div>
-        <div className={showcase.subHeroShade} aria-hidden />
+        <div className={`${showcase.subHeroShade} ${styles.heroShade}`} aria-hidden />
         <div className={showcase.subHeroInner}>
           <p className={showcase.subHeroEyebrow}>Vi tilbyr også</p>
           <h1 id="tjenester-title" className={showcase.subHeroTitle}>
@@ -100,17 +101,17 @@ export function TjenesterExperience({ sections }: Props) {
             <p className={styles.sideBody}>
               Vi fastsetter pris når vi har sett bilen og hva du ønsker utført.
             </p>
-            <a href="tel:+4792050990" className={`showcasePill showcasePillDark ${styles.sideCta}`}>
-              <span>Ring 920 50 990</span>
+            <a href={site.phoneHref} className={`showcasePill showcasePillDark ${styles.sideCta}`}>
+              <span>Ring {site.phone.replace("+47 ", "")}</span>
               <span className="showcasePillArrow" aria-hidden>
                 ›
               </span>
             </a>
             <a
-              href="mailto:post@xbilsenter.no"
+              href={`mailto:${site.email}`}
               className={`showcasePill showcasePillGhost ${styles.sideCta} ${styles.sideCtaGhost}`}
             >
-              <span>post@xbilsenter.no</span>
+              <span>{site.email}</span>
               <span className="showcasePillArrow" aria-hidden>
                 ›
               </span>

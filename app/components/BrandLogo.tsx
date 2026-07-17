@@ -4,7 +4,7 @@ import styles from "./BrandLogo.module.css";
 
 type LogoVariant = "default" | "onDark";
 
-/** X Bilsenter ordmerke — `/x-logo.png`. */
+/** X Auto ordmerke — `/xauto.svg`. */
 export function BrandLogo({
   clipPathId: _clipPathId,
   variant = "default",
@@ -17,10 +17,10 @@ export function BrandLogo({
 }) {
   return (
     <Image
-      src="/x-logo.png"
-      alt="X Bilsenter"
-      width={920}
-      height={100}
+      src="/xauto.svg"
+      alt="X Auto AS"
+      width={1967}
+      height={560}
       className={[styles.logo, variant === "onDark" ? styles.onDark : styles.onLight, className]
         .filter(Boolean)
         .join(" ")}

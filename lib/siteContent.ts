@@ -1,11 +1,11 @@
 /** Sentralt innhold — adresse, kontakt, salg/innbytte (som xauto/lib/content). */
 
 export const site = {
-  name: "X Bilsenter AS",
+  name: "X Auto AS",
   tagline: "Bilhandel gjort trygt og enkelt.",
-  phone: "+47 920 50 990",
-  phoneHref: "tel:+4792050990",
-  email: "post@xbilsenter.no",
+  phone: "+47 482 96 800",
+  phoneHref: "tel:+4748296800",
+  email: "post@xauto.no",
   address: {
     street: "Rovenveien 125",
     postalCode: "1900",
@@ -40,6 +40,35 @@ export const openingHours = [
   { day: "Søn", hours: "Stengt / etter avtale" },
 ] as const;
 
+export const reviews = [
+  {
+    quote:
+      "Selger ordnet alt fra A til Å. Enkel prosess, hyggelig oppfølging etter handelen.",
+    author: "Joachim R.",
+  },
+  {
+    quote:
+      "Bilen er som avtalt. Grei og imøtekommende selger — anbefales videre.",
+    author: "Ronny M.",
+  },
+  {
+    quote:
+      "Fornøyd hittil. Handler gjerne bil av dere igjen ved en senere anledning.",
+    author: "Stig A.",
+  },
+] as const;
+
+export const partners = [
+  { name: "SpareBank 1", category: "Finansiering" },
+  { name: "Santander", category: "Finansiering" },
+  { name: "DNB", category: "Finansiering" },
+  { name: "If", category: "Forsikring" },
+  { name: "Gjensidige", category: "Forsikring" },
+  { name: "Fremtind", category: "Forsikring" },
+  { name: "Enter", category: "Forsikring" },
+  { name: "Tryg", category: "Forsikring" },
+] as const;
+
 export type SellFlowVariant = "sell" | "innbytte";
 
 export const sellFlowHero = {
@@ -50,7 +79,7 @@ export const sellFlowHero = {
       "Uten at du trenger å handle ny hos oss. Raskt oppgjør — du slipper hele annonseringsprosessen.",
     points: sellPoints,
     image: "/bilder/hero/bilde2.webp",
-    imageAlt: "Bilinteriør hos X Bilsenter",
+    imageAlt: "Bilinteriør hos X Auto",
     imagePosition: "center 58%",
     ariaLabel: "Fortsett med salg",
     cta: "Fortsett",
@@ -63,7 +92,7 @@ export const sellFlowHero = {
       "Send inn registreringsnummer og kilometerstand — vi svarer med et konkret innbyttetilbud.",
     points: innbyttePoints,
     image: "/bilder/hero/range.webp",
-    imageAlt: "Bil hos X Bilsenter",
+    imageAlt: "Bil hos X Auto",
     imagePosition: "center 40%",
     ariaLabel: "Fortsett med innbytte",
     cta: "Fortsett",

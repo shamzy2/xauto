@@ -17,7 +17,7 @@ export default function AdminCarsLayout({
         <Link
           className={styles.brandLogo}
           href="/admin/innsendinger"
-          aria-label="X Bilsenter, admin"
+          aria-label="X Auto, admin"
         >
           <BrandLogo clipPathId="admin-cars-logo-clip" />
         </Link>

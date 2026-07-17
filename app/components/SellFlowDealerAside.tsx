@@ -4,8 +4,8 @@ import flow from "./sellFlowShared.module.css";
 /** Forhandlerinfo i salgs-/innbytte-flyt (xauto-stil). */
 export function SellFlowDealerAside() {
   return (
-    <aside className={flow.dealerAside} aria-label="X Bilsenter kontakt">
-      <p className={flow.dealerAsideTitle}>X Bilsenter</p>
+    <aside className={flow.dealerAside} aria-label="X Auto kontakt">
+      <p className={flow.dealerAsideTitle}>X Auto AS</p>
       <dl className={flow.dealerAsideList}>
         <div>
           <dt>Besøk</dt>

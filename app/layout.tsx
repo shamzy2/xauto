@@ -26,7 +26,7 @@ const chakra = Chakra_Petch({
 const site = new URL(getSiteUrl());
 
 const defaultDescription =
-  "X Bilsenter AS på Fetsund: trygg bilhandel med tydelige valg innen finansiering og forsikring. Bruktbil, innbytte og salg av bil, lokalt eller på avstand.";
+  "X Auto AS på Fetsund: trygg bilhandel med tydelige valg innen finansiering og forsikring. Bruktbil, innbytte og salg av bil, lokalt eller på avstand.";
 
 export const viewport: Viewport = {
   themeColor: "#121212",
@@ -35,12 +35,12 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: site,
   title: {
-    default: "X Bilsenter AS – Bilhandel gjort trygt og enkelt.",
-    template: "%s - X Bilsenter AS",
+    default: "X Auto AS – Bilhandel gjort trygt og enkelt.",
+    template: "%s - X Auto AS",
   },
   description: defaultDescription,
   keywords: [
-    "X Bilsenter",
+    "X Auto AS",
     "bilforhandler",
     "Fetsund",
     "bruktbil",
@@ -54,14 +54,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "nb_NO",
-    siteName: "X Bilsenter AS",
-    title: "X Bilsenter AS – Bilhandel gjort trygt og enkelt.",
+    siteName: "X Auto AS",
+    title: "X Auto AS – Bilhandel gjort trygt og enkelt.",
     description: defaultDescription,
-    images: [{ url: "/bilder/hero/finans.jpg", alt: "X Bilsenter" }],
+    images: [{ url: "/bilder/hero/finans.jpg", alt: "X Auto AS" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "X Bilsenter AS – Bilhandel gjort trygt og enkelt.",
+    title: "X Auto AS – Bilhandel gjort trygt og enkelt.",
     description: defaultDescription,
     images: ["/bilder/hero/finans.jpg"],
   },

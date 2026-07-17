@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: { absolute: "Logg inn (admin) - X Bilsenter AS" },
+  title: { absolute: "Logg inn (admin) - X Auto AS" },
 };
 
 export default function AdminLoginLayout({

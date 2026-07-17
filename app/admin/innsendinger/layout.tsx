@@ -19,7 +19,7 @@ export default function AdminInnsendingerLayout({
         <Link
           className={styles.brandLogo}
           href="/admin/innsendinger"
-          aria-label="X Bilsenter, innsendinger (admin)"
+          aria-label="X Auto, innsendinger (admin)"
         >
           <BrandLogo clipPathId="admin-innsendinger-logo-clip" />
         </Link>

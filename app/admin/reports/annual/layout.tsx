@@ -17,7 +17,7 @@ export default function AdminAnnualReportLayout({
         <Link
           className={styles.brandLogo}
           href="/admin/dashboard"
-          aria-label="X Bilsenter, admin"
+          aria-label="X Auto, admin"
         >
           <BrandLogo clipPathId="admin-reports-logo-clip" />
         </Link>

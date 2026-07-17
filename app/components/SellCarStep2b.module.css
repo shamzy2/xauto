@@ -148,7 +148,7 @@
 }
 
 .radioLabel:hover {
-  border-color: rgb(188 20 24 / 0.35);
+  border-color: rgb(234 160 56 / 0.35);
 }
 
 .radioLabel:has(input:checked) {
@@ -165,7 +165,7 @@
 .formError {
   margin: 0;
   font-size: 14px;
-  color: #f87171;
+  color: #eaa038;
 }
 
 .loadingMessage {
@@ -178,7 +178,7 @@
 .message {
   margin: 0;
   text-align: center;
-  color: #f87171;
+  color: #eaa038;
   font-size: 15px;
   max-width: 36rem;
   align-self: center;

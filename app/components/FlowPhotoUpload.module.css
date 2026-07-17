@@ -31,7 +31,7 @@
 
 .dropzoneActive {
   border-color: var(--accent);
-  background: rgb(188 20 24 / 0.04);
+  background: rgb(234 160 56 / 0.04);
 }
 
 .uploadIcon {
@@ -163,7 +163,7 @@
 .error {
   margin: 0.65rem 0 0;
   font-size: 13px;
-  color: #dc2626;
+  color: #eaa038;
 }
 
 .compressStatus {

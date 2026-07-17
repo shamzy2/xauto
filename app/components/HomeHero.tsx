@@ -6,9 +6,9 @@ import { useCallback, useEffect, useState } from "react";
 import styles from "./HomeHero.module.css";
 
 const heroSlides = [
-  { src: "/bilder/hero/range.webp", alt: "Tjenester hos X Bilsenter" },
-  { src: "/bilder/hero/bilde2.webp", alt: "Forsikring hos X Bilsenter", objectPosition: "center 58%" },
-  { src: "/bilder/hero/volvo1.jpg", alt: "Bil hos X Bilsenter", flip: true },
+  { src: "/bilder/hero/range.webp", alt: "Tjenester hos X Auto" },
+  { src: "/bilder/hero/bilde2.webp", alt: "Forsikring hos X Auto", objectPosition: "center 58%" },
+  { src: "/bilder/hero/volvo1.jpg", alt: "Bil hos X Auto", flip: true },
 ] as const;
 
 const ctas = [
@@ -56,10 +56,12 @@ export function HomeHero() {
 
       <div className={styles.content}>
         <div className={styles.copy}>
-          <p className={styles.brand}>X Bilsenter</p>
+          <p className={styles.brand}>X Auto AS</p>
           <h1 className={styles.headline}>
-            Trygg handel.
-            <span className={styles.headlineThin}> Gode valg.</span>
+            <span className={styles.headlineLine}>Bilhandel gjort</span>
+            <span className={`${styles.headlineLine} ${styles.headlineThin}`}>
+              trygt og enkelt
+            </span>
           </h1>
           <p className={styles.lead}>
             Bruktbil, innbytte og salg — lokalt eller på avstand.
@@ -68,7 +70,7 @@ export function HomeHero() {
 
         <aside className={styles.aside}>
           <p className={styles.asideLabel}>Hos oss får du</p>
-          <p className={styles.asideHighlight}>Tydelige valg · Ryddige avtaler</p>
+          <p className={styles.asideHighlight}>100% TILFREDSHET MED BILKJØPET.</p>
           <div className={styles.ctaStack}>
             {ctas.map((cta) => (
               <Link

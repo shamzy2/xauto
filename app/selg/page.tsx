@@ -6,7 +6,7 @@ import pageStyles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Selg bilen",
   description:
-    "Få uforpliktende tilbud innen 24 timer. Selg bilen trygt hos X Bilsenter.",
+    "Få uforpliktende tilbud innen 24 timer. Selg bilen trygt hos X Auto.",
 };
 
 export default function SelgPage() {

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* X Bilsenter — hvit base + filmgrain via SiteBackdrop */
+  /* X Auto — hvit base + filmgrain via SiteBackdrop */
   --background-base: #ffffff;
   --background: transparent;
   --foreground: #141414;
@@ -21,10 +21,10 @@
   --sell-flow-column-max: 980px;
   --sell-flow-route-max: min(var(--sell-flow-column-max), 100%);
   --sell-flow-route-pad: clamp(20px, 4vw, 48px);
-  --accent: #bc1418;
-  --accent-hover: #d4181c;
-  --accent-soft: rgb(188 20 24 / 0.18);
-  --accent-focus-ring: rgb(188 20 24 / 0.35);
+  --accent: #eaa038;
+  --accent-hover: #d4892a;
+  --accent-soft: rgb(234 160 56 / 0.18);
+  --accent-focus-ring: rgb(234 160 56 / 0.35);
   /* Sticky header — utility + hovedmeny (ca.) */
   --site-header-offset: 94px;
   /* Filmgrain — mørk støy på hvit base */
@@ -37,7 +37,7 @@
   --showcase-grey: #666666;
   --showcase-light: #d9d9d9;
   --showcase-white: #ffffff;
-  --showcase-red: #bc1418;
+  --showcase-red: #eaa038;
 }
 
 @media (max-width: 900px) {

@@ -8,7 +8,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Kontakt oss",
   description:
-    "Kontakt X Bilsenter på telefon eller e-post. Finn adresse og veibeskrivelse til Fetsund.",
+    "Kontakt X Auto på telefon eller e-post. Finn adresse og veibeskrivelse til Fetsund.",
 };
 
 const kontaktHours = [
@@ -22,7 +22,7 @@ export default function KontaktPage() {
     <div className={styles.heroBand}>
       <Menu />
       <main className={styles.kontaktMain}>
-        <section className={styles.hero} aria-label="Kontakt X Bilsenter">
+        <section className={styles.hero} aria-label="Kontakt X Auto">
           <h1 className={styles.pageTitle}>Kontakt oss</h1>
           <p className={styles.pageLead}>
             Ring, send e-post eller fyll ut skjemaet — vi svarer så raskt vi kan.
@@ -97,7 +97,7 @@ export default function KontaktPage() {
       <section className={styles.mapBand} aria-label="Kart">
         <div className={styles.mapShell}>
           <iframe
-            title="Kart til X Bilsenter AS"
+            title="Kart til X Auto AS"
             src={site.address.mapsUrl}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

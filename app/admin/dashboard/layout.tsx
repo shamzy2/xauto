@@ -17,7 +17,7 @@ export default function AdminDashboardLayout({
         <Link
           className={styles.brandLogo}
           href="/admin/dashboard"
-          aria-label="X Bilsenter, dashboard (admin)"
+          aria-label="X Auto, dashboard (admin)"
         >
           <BrandLogo clipPathId="admin-dashboard-logo-clip" />
         </Link>

@@ -243,7 +243,7 @@
 .formError {
   margin: 1rem 0 0;
   font-size: 14px;
-  color: #f87171;
+  color: #eaa038;
 }
 
 .loadingMessage {
@@ -256,7 +256,7 @@
 .message {
   margin: 0;
   text-align: center;
-  color: #f87171;
+  color: #eaa038;
   font-size: 15px;
   max-width: 36rem;
   align-self: center;

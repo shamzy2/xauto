@@ -11,7 +11,7 @@ import { VareBilerHero } from "./VareBilerHero";
 export const metadata: Metadata = {
   title: "Våre biler",
   description:
-    "Se biler til salgs og start innbytte: oppgi reg.nr. og kilometer, og fortsett til innbytteskjemaet hos X Bilsenter på Fetsund.",
+    "Se biler til salgs og start innbytte: oppgi reg.nr. og kilometer, og fortsett til innbytteskjemaet hos X Auto på Fetsund.",
 };
 
 export default function VareBilerPage() {
@@ -24,7 +24,7 @@ export default function VareBilerPage() {
         </div>
         <div className={showcase.subHeroShade} aria-hidden />
         <div className={showcase.subHeroInner}>
-          <p className={showcase.subHeroEyebrow}>X Bilsenter</p>
+          <p className={showcase.subHeroEyebrow}>X Auto AS</p>
           <h1 id="vare-biler-title" className={showcase.subHeroTitle}>
             Våre biler
           </h1>
