@@ -16,12 +16,12 @@ const facts = [
     icon: "rating" as const,
   },
   {
-    value: "1000+",
+    value: "100+",
     label: "Fornøyde kunder",
     icon: "customers" as const,
   },
   {
-    value: "80+",
+    value: "10+",
     label: "Biler alltid på lager",
     icon: "stock" as const,
   },
