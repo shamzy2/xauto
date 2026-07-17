@@ -122,7 +122,7 @@ export function OmOssExperience() {
       >
         <div className={showcase.subHeroBg}>
           <Image
-            src="/m.jpg"
+            src="/Image00005-16.jpg"
             alt=""
             fill
             sizes="100vw"
@@ -130,7 +130,6 @@ export function OmOssExperience() {
             className={styles.heroImg}
           />
         </div>
-        <div className={`${showcase.subHeroShade} ${styles.heroShade}`} aria-hidden />
         <div className={`${showcase.subHeroInner} ${styles.heroInner}`}>
           <h1 id="om-oss-title" className={showcase.subHeroTitle}>
             Om oss

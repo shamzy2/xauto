@@ -4,24 +4,16 @@
   color: var(--foreground);
 }
 
-.heroShade {
-  background: linear-gradient(
-    180deg,
-    rgb(0 0 0 / 0.45) 0%,
-    rgb(0 0 0 / 0.72) 55%,
-    rgb(0 0 0 / 0.82) 100%
-  );
-}
-
 .heroImg {
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center center;
+  transform: scale(0.86);
+  transform-origin: center center;
 }
 
 @media (min-width: 900px) {
   .heroImg {
-    /* Less asphalt in front — car sits higher in the hero */
-    object-position: center 28%;
+    transform: scale(0.8);
   }
 }
 
