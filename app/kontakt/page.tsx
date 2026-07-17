@@ -42,18 +42,10 @@ export default function KontaktPage() {
                 <h2 className={styles.cardTitle}>Kontaktinformasjon</h2>
                 <dl className={styles.infoList}>
                   <div>
-                    <dt className={styles.term}>Telefon</dt>
-                    <dd className={styles.value}>
-                      <a href={site.phoneHref} className={styles.valueLink}>
-                        {site.phone}
-                      </a>
-                    </dd>
-                  </div>
-                  <div>
                     <dt className={styles.term}>E-post</dt>
                     <dd className={styles.value}>
                       <a href={`mailto:${site.email}`} className={styles.valueLink}>
-                        {site.email}
+                        {site.email.toUpperCase()}
                       </a>
                     </dd>
                   </div>

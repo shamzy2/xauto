@@ -1,4 +1,5 @@
-import { partners, reviews } from "@/lib/siteContent";
+import Image from "next/image";
+import { reviews } from "@/lib/siteContent";
 import styles from "./HomeSocialProof.module.css";
 
 function Stars() {
@@ -69,11 +70,16 @@ export function HomeSocialProof() {
             <span className={styles.titleRule} aria-hidden />
           </header>
 
-          <ul className={styles.partnerList}>
-            {partners.map((p) => (
-              <li key={p.name}>{p.name}</li>
-            ))}
-          </ul>
+          <div className={styles.partnerVisual}>
+            <Image
+              src="/partner.png"
+              alt="Våre samarbeidspartnere: SpareBank 1, Santander, AS Finansiering, Gjensidige, If, NBT, Fremtind, Enter, Auto Concept, Fragus Group og Axess Logistics"
+              width={4531}
+              height={512}
+              className={styles.partnerImg}
+              sizes="(max-width: 900px) 100vw, min(1100px, 92vw)"
+            />
+          </div>
         </div>
       </div>
     </section>

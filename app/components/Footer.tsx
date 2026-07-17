@@ -4,10 +4,10 @@ import { site } from "@/lib/siteContent";
 import styles from "./Footer.module.css";
 
 const navLinks = [
-  { href: "/vare-biler", label: "Våre biler" },
+  { href: "/biler", label: "Våre biler" },
   { href: "/innbytte", label: "Innbytte" },
   { href: "/selg", label: "Selg bilen din" },
-  { href: "/tjenester", label: "Tjenester" },
+  { href: "/om-oss", label: "Om oss" },
   { href: "/kontakt", label: "Kontakt oss" },
 ] as const;
 
@@ -39,9 +39,7 @@ export function Footer() {
             <address className={styles.address}>
               {site.address.formatted}
               <br />
-              <a href={site.phoneHref}>{site.phone}</a>
-              {" · "}
-              <a href={`mailto:${site.email}`}>{site.email}</a>
+              <a href={`mailto:${site.email}`}>{site.email.toUpperCase()}</a>
             </address>
           </div>
 
@@ -65,7 +63,7 @@ export function Footer() {
                 ›
               </span>
             </Link>
-            <Link href="/vare-biler" className={`showcasePill showcasePillGhost ${styles.footerCta}`}>
+            <Link href="/biler" className={`showcasePill showcasePillGhost ${styles.footerCta}`}>
               <span>Våre biler</span>
               <span className="showcasePillArrow" aria-hidden>
                 ›

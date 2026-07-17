@@ -16,15 +16,9 @@ export function SellFlowDealerAside() {
           </dd>
         </div>
         <div>
-          <dt>Telefon</dt>
-          <dd>
-            <a href={site.phoneHref}>{site.phone}</a>
-          </dd>
-        </div>
-        <div>
           <dt>E-post</dt>
           <dd>
-            <a href={`mailto:${site.email}`}>{site.email}</a>
+            <a href={`mailto:${site.email}`}>{site.email.toUpperCase()}</a>
           </dd>
         </div>
       </dl>

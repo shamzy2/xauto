@@ -73,7 +73,7 @@ export function HeroCards() {
                 <h2 className={styles.title}>Våre biler</h2>
                 <p className={styles.body}>Flere biler tilgjengelig.</p>
               </div>
-              <Link href="/vare-biler" className={styles.ctaRow}>
+              <Link href="/biler" className={styles.ctaRow}>
                 <span className={styles.ctaLabel}>Se våre biler</span>
                 <CtaArrow className={styles.ctaArrow} />
               </Link>
@@ -91,7 +91,7 @@ export function HeroCards() {
               </div>
             </div>
             <Link
-              href="/vare-biler"
+              href="/biler"
               className={styles.cardHitArea}
               tabIndex={-1}
               aria-hidden="true"

@@ -79,8 +79,8 @@ export function RouteTransition({ children }: { children: React.ReactNode }) {
     }
   } else if (
     pathname === "/" ||
-    pathname === "/tjenester" ||
-    pathname.startsWith("/tjenester/")
+    pathname === "/om-oss" ||
+    pathname.startsWith("/om-oss/")
   ) {
     /* Kun opacity — transform på wrapper bryter sticky/fixed på menyen */
     enterClass = styles.enterTjenester;

@@ -6,7 +6,7 @@ import styles from "./HomeAbout.module.css";
 export function HomeAbout() {
   return (
     <section className={styles.shell} aria-labelledby="about-title">
-      <Link href="/vare-biler" className={styles.visual} aria-label="Se våre biler">
+      <Link href="/biler" className={styles.visual} aria-label="Se våre biler">
         <Image
           src="/bilder/hero/range.webp"
           alt=""
@@ -60,7 +60,7 @@ export function HomeAbout() {
             merkes når nøklene overleveres til en fornøyd kunde.
           </p>
           <p>
-            Du finner oss på Fetsund i Lillestrøm kommune, med et 650
+            Du finner oss på Fetsund i Lillestrøm kommune, med et 1000
             kvadratmeter stort utstillingslokale. Kom innom for en hyggelig
             bilprat.
           </p>

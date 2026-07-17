@@ -4,9 +4,9 @@ import { getSiteUrl } from "@/lib/siteUrl";
 
 const publicPaths = [
   "/",
-  "/vare-biler",
+  "/biler",
   "/kontakt",
-  "/tjenester",
+  "/om-oss",
   "/selg",
   "/selg/steg-2a",
   "/selg/steg-2b",

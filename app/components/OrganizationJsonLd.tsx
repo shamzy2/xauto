@@ -21,7 +21,6 @@ export function OrganizationJsonLd() {
         name: site.name,
         url,
         email: site.email,
-        telephone: site.phoneHref.replace("tel:", ""),
         address: postalAddress,
       },
       {
@@ -31,7 +30,7 @@ export function OrganizationJsonLd() {
         url,
         parentOrganization: { "@id": `${url}/#organization` },
         address: postalAddress,
-        telephone: site.phoneHref.replace("tel:", ""),
+        email: site.email,
       },
     ],
   };

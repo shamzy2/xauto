@@ -11,9 +11,9 @@ import styles from "./Menu.module.css";
 
 const navItems = [
   { href: "/", label: "Hjem" },
-  { href: "/vare-biler", label: "Våre biler" },
+  { href: "/biler", label: "Våre biler" },
   { href: "/innbytte", label: "Innbytte" },
-  { href: "/tjenester", label: "Tjenester" },
+  { href: "/om-oss", label: "Om oss" },
 ] as const;
 
 const utilityLinks = [
@@ -38,7 +38,7 @@ function isSellInnbytteFlowStep(pathname: string): boolean {
 type MenuTone = "default" | "onDark" | "auto";
 
 type MenuProps = {
-  /** `auto` = mørk på forsiden og /tjenester. */
+  /** `auto` = mørk på forsiden, /om-oss og /biler. */
   tone?: MenuTone;
 };
 
@@ -52,7 +52,7 @@ export function Menu({ tone = "auto" }: MenuProps) {
 
   const resolvedTone =
     tone === "auto"
-      ? pathname === "/" || pathname === "/tjenester" || pathname === "/vare-biler"
+      ? pathname === "/" || pathname === "/om-oss" || pathname === "/biler"
         ? "onDark"
         : "default"
       : tone;
@@ -128,7 +128,7 @@ export function Menu({ tone = "auto" }: MenuProps) {
   }, [closeMenu]);
 
   const isHeroUnderNav =
-    pathname === "/" || pathname === "/vare-biler" || pathname === "/tjenester";
+    pathname === "/" || pathname === "/biler" || pathname === "/om-oss";
   const useTransparentMain = onDark && !solidBar && isHeroUnderNav;
 
   const mainBarClass = [
@@ -216,7 +216,7 @@ export function Menu({ tone = "auto" }: MenuProps) {
                       ›
                     </span>
                   </Link>
-                  <Link href="/vare-biler" className={styles.mobileCtaGhost} onClick={closeMenu}>
+                  <Link href="/biler" className={styles.mobileCtaGhost} onClick={closeMenu}>
                     <span>Våre biler</span>
                     <span className={styles.mobileCtaArrow} aria-hidden>
                       ›
@@ -237,8 +237,8 @@ export function Menu({ tone = "auto" }: MenuProps) {
           <div className={styles.utilityInner}>
             <div className={styles.utilityLeft}>
               <span className={styles.utilityLocation}>{site.address.label}</span>
-              <a className={styles.utilityPhone} href={site.phoneHref}>
-                {site.phone}
+              <a className={styles.utilityPhone} href={`mailto:${site.email}`}>
+                {site.email.toUpperCase()}
               </a>
             </div>
             <nav className={styles.utilityNav}>
@@ -283,9 +283,9 @@ export function Menu({ tone = "auto" }: MenuProps) {
             <div className={styles.actions}>
               <a
                 className={`${styles.mobilePhone} ${onDark ? styles.mobilePhoneDark : ""}`}
-                href={site.phoneHref}
+                href={`mailto:${site.email}`}
               >
-                Ring oss
+                {site.email.toUpperCase()}
               </a>
               <Link
                 href="/kontakt"

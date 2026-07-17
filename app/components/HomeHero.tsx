@@ -12,7 +12,7 @@ const heroSlides = [
 ] as const;
 
 const ctas = [
-  { href: "/vare-biler", label: "Våre biler", variant: "solid" as const },
+  { href: "/biler", label: "Våre biler", variant: "solid" as const },
   { href: "/selg", label: "Selg bilen din", variant: "solid" as const },
   { href: "/innbytte", label: "Innbytte", variant: "ghost" as const },
 ];

@@ -3,8 +3,6 @@
 export const site = {
   name: "X Auto AS",
   tagline: "Bilhandel gjort trygt og enkelt.",
-  phone: "+47 482 96 800",
-  phoneHref: "tel:+4748296800",
   email: "post@xauto.no",
   address: {
     street: "Rovenveien 125",
@@ -19,7 +17,7 @@ export const site = {
       "https://maps.google.com/maps?q=Rovenveien+125,+1900+Fetsund&t=&z=15&ie=UTF8&iwloc=&output=embed",
     mapsLink: "https://maps.google.com/maps?q=Rovenveien+125,+1900+Fetsund",
   },
-  showroom: "650 kvm utstillingsareal på Fetsund",
+  showroom: "1000 kvm utstillingsareal på Fetsund",
 } as const;
 
 export const sellPoints = [
