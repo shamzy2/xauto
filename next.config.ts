@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  /* Skjul dev-badge («N») på localhost — vises ikke i produksjon uansett. */
+  devIndicators: false,
 };
 
 export default nextConfig;

@@ -1,0 +1,85 @@
+/* /tjenester — kun opacity (ingen transform), ellers brytes `position:sticky` på menyen */
+.enterTjenester {
+  animation: routeEnterFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes routeEnterFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Standard (ikke-selg) — lett fade inn, uten transform (sticky-meny) */
+.enter {
+  animation: routeEnterFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Selg-flyt: første visning eller ukjent steg-hopp */
+.sellEnterNeutral {
+  animation: sellNeutralIn 0.48s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes sellNeutralIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Neste steg — inn fra høyre, uttrykk som «går videre» */
+.sellEnterForward {
+  animation: sellForwardIn 0.46s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes sellForwardIn {
+  from {
+    opacity: 0;
+    transform: translateX(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Tilbake — inn fra venstre */
+.sellEnterBack {
+  animation: sellBackIn 0.46s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes sellBackIn {
+  from {
+    opacity: 0;
+    transform: translateX(-22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enterTjenester,
+  .enter,
+  .sellEnterNeutral,
+  .sellEnterForward,
+  .sellEnterBack {
+    animation: routeEnterReduced 0.01s both;
+  }
+
+  @keyframes routeEnterReduced {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

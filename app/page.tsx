@@ -1,25 +1,16 @@
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Quotes from "@/components/Quotes";
-import SellCar from "@/components/SellCar";
-import Services from "@/components/Services";
-import Trust from "@/components/Trust";
+import { HomeHero } from "./components/HomeHero";
+import { HomeServices } from "./components/HomeServices";
+import { Menu } from "./components/Menu";
+import { SellEnkeltOgTrygt } from "./components/SellEnkeltOgTrygt";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <Trust />
-        <Services />
-        <SellCar />
-        <About />
-        <Quotes />
-        <Contact />
-      </main>
-    </>
+    <div className={styles.homeBleed}>
+      <Menu />
+      <HomeHero />
+      <HomeServices />
+      <SellEnkeltOgTrygt scope="home" />
+    </div>
   );
 }

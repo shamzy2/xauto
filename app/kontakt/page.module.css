@@ -1,0 +1,205 @@
+.heroBand {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.kontaktMain {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--layout-shell-max);
+  margin-inline: auto;
+  padding: 40px var(--layout-pad-x) 56px;
+}
+
+.hero {
+  box-sizing: border-box;
+}
+
+.heroInner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pageTitle {
+  margin: 0 0 8px;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pageLead {
+  margin: 0 0 24px;
+  max-width: 36rem;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--showcase-grey);
+}
+
+.contactGrid {
+  width: 100%;
+}
+
+.contactPanel {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border-default);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.panelTitle {
+  margin: 0 0 6px;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--foreground);
+}
+
+.panelLead {
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--showcase-grey);
+}
+
+@media (min-width: 980px) {
+  .contactPanel {
+    grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.85fr);
+    align-items: start;
+  }
+}
+
+.formWrap {
+  padding: 28px 24px 32px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 980px) {
+  .formWrap {
+    padding: 36px 40px 40px;
+    border-bottom: none;
+    border-right: 1px solid var(--border-subtle);
+  }
+}
+
+.infoCard {
+  padding: 28px 24px 32px;
+  background: var(--surface-muted);
+}
+
+@media (min-width: 980px) {
+  .infoCard {
+    padding: 36px 32px 40px;
+  }
+}
+
+.cardTitle {
+  margin: 0 0 20px;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--foreground);
+}
+
+.infoList {
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoList div {
+  margin: 0;
+}
+
+.term {
+  margin: 0 0 4px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--showcase-grey);
+}
+
+.value {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--foreground);
+}
+
+.valueLink {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--showcase-red);
+  padding-bottom: 1px;
+}
+
+.valueLink:hover {
+  color: var(--showcase-red);
+}
+
+.hours {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 16px;
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hoursDay {
+  color: var(--foreground);
+}
+
+.hoursTimeAccent {
+  color: var(--showcase-red);
+  font-weight: 500;
+}
+
+.hoursTimeAlert {
+  color: var(--showcase-grey);
+}
+
+.mapBand {
+  width: 100%;
+  border-top: 1px solid var(--border-default);
+}
+
+.mapShell {
+  width: 100%;
+  max-width: var(--layout-shell-max);
+  margin: 0 auto;
+  padding: 0 var(--layout-pad-x) 48px;
+}
+
+.mapIframe {
+  display: block;
+  width: 100%;
+  height: min(420px, 50vh);
+  border: 1px solid var(--border-default);
+  background: var(--surface-muted);
+}

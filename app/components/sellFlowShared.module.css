@@ -1,0 +1,634 @@
+/* Dinbil-inspirert salgs-/innbytte-flyt — lys base, X Bilsenter rød */
+
+.flowShell {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 60vh;
+  padding: clamp(28px, 5vw, 56px) 0 clamp(64px, 10vw, 120px);
+  background: var(--background-base);
+  color: var(--foreground);
+}
+
+.flowInner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.75rem, 3vw, 2.5rem);
+  width: 100%;
+  max-width: var(--sell-flow-route-max);
+  margin: 0 auto;
+  padding-inline: var(--sell-flow-route-pad);
+}
+
+.pageHeader {
+  margin-top: 0.15rem;
+}
+
+.pageTitle {
+  margin: 0;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: clamp(1.55rem, 3vw, 1.85rem);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  color: var(--foreground);
+}
+
+.pageIntro {
+  margin: 0.55rem 0 0;
+  max-width: 38rem;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+.loadingText {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+
+.errorCard {
+  padding: 1rem 1.25rem;
+  border: 1px solid rgb(188 20 24 / 0.28);
+  border-radius: 14px;
+  background: rgb(188 20 24 / 0.06);
+  font-size: 14px;
+  color: #b91c1c;
+}
+
+.flowFormCard {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow:
+    0 1px 0 rgb(0 0 0 / 0.03) inset,
+    0 16px 40px rgb(0 0 0 / 0.06);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.wizard {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.35rem, 2.5vw, 1.75rem);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-muted);
+  text-decoration: none;
+  width: fit-content;
+  transition: color 0.15s ease;
+}
+
+.backLink:hover {
+  color: var(--foreground);
+}
+
+.progressRow {
+  display: flex;
+  gap: 8px;
+}
+
+.progressSeg {
+  flex: 1;
+  height: 3px;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 0.08);
+  transition: background-color 0.25s ease;
+}
+
+.progressSegActive {
+  background: var(--accent);
+}
+
+.stepBody {
+  scroll-margin-top: calc(var(--site-header-offset) + 12px);
+}
+
+.stepHead {
+  margin-bottom: 0.35rem;
+}
+
+.stepMeta {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.stepTitle {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.45rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: var(--foreground);
+}
+
+.stepLead {
+  margin: 0.45rem 0 0;
+  max-width: 36rem;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+
+.flowCard {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.flowSection {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.flowNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 0.25rem;
+  padding-top: clamp(1.25rem, 2.5vw, 1.75rem);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.flowBtnGhost,
+.flowBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  min-width: 7.5rem;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.flowBtnGhost {
+  background: transparent;
+  border: 1px solid var(--border-default);
+  color: var(--foreground);
+}
+
+.flowBtnGhost:hover {
+  border-color: rgb(0 0 0 / 0.22);
+  background: var(--surface-muted);
+}
+
+.flowBtnGhost:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.flowBtnPrimary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.flowBtnPrimary:hover {
+  background: var(--accent-hover);
+}
+
+.flowBtnPrimary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.formError {
+  margin: 0.75rem 0 0;
+  font-size: 14px;
+  color: #dc2626;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.sectionLead {
+  margin: 0.4rem 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+.sectionDivider {
+  height: 1px;
+  margin: 0;
+  border: none;
+  background: var(--border-subtle);
+}
+
+.fieldPanel {
+  box-sizing: border-box;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: rgb(0 0 0 / 0.02);
+}
+
+.panelTitle {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.panelLead {
+  margin: 0.25rem 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+.fieldLabel {
+  display: block;
+  margin: 0.85rem 0 0.35rem;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.radioStack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.radioOption {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--foreground);
+  line-height: 1.35;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.radioOption:hover {
+  border-color: rgb(188 20 24 / 0.35);
+}
+
+.radioOption:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.radioInput {
+  margin: 0.15rem 0 0;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+
+.textInput,
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  background: var(--input-bg);
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--foreground);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.textInput {
+  height: 42px;
+  padding: 0 0.85rem;
+}
+
+.textarea {
+  min-height: 6.5rem;
+  padding: 0.65rem 0.85rem;
+  resize: vertical;
+  line-height: 1.45;
+}
+
+.textInput::placeholder,
+.textarea::placeholder {
+  color: rgb(0 0 0 / 0.35);
+}
+
+.textInput:focus-visible,
+.textarea:focus-visible {
+  outline: none;
+  border-color: rgb(0 0 0 / 0.22);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.dateRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+}
+
+.dateIcon {
+  flex-shrink: 0;
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+}
+
+.dateHint {
+  margin: 0.4rem 0 0;
+  font-size: 11px;
+  color: var(--ink-muted);
+  line-height: 1.4;
+}
+
+.checkGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.35rem 1rem;
+  margin-top: 0.85rem;
+}
+
+@media (min-width: 900px) {
+  .checkGrid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+.checkOption {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.35rem 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--foreground);
+  line-height: 1.35;
+  cursor: pointer;
+}
+
+.checkInput {
+  margin: 0.12rem 0 0;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+
+.optionalChkLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--foreground);
+  line-height: 1.35;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.optionalChkLabel:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.optionalChk {
+  margin: 0.12rem 0 0;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+
+.expandBtn {
+  align-self: flex-start;
+  margin-top: 0.85rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid rgb(188 20 24 / 0.35);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.expandBtn:hover {
+  background: rgb(188 20 24 / 0.14);
+  border-color: rgb(188 20 24 / 0.5);
+}
+
+.expandBtn[aria-expanded="true"] {
+  border-color: var(--accent);
+}
+
+.expandPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+.inputWithIcon + .inputWithIcon {
+  margin-top: 0.65rem;
+}
+
+.fieldIcon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.15rem;
+  height: 1.15rem;
+  color: var(--ink-muted);
+  pointer-events: none;
+}
+
+.textInputPadded {
+  padding-left: 2.5rem;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.dealerAside {
+  box-sizing: border-box;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: rgb(0 0 0 / 0.02);
+}
+
+.dealerAsideTitle {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.dealerAsideList {
+  margin: 0.65rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.dealerAsideList dt {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.dealerAsideList dd {
+  margin: 0.12rem 0 0;
+  font-size: 13px;
+  color: var(--foreground);
+}
+
+.dealerAsideList a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.dealerAsideList a:hover {
+  color: var(--accent);
+}
+
+.fieldPanel > .inputWithIcon:first-of-type {
+  margin-top: 0.85rem;
+}
+
+.fieldPanel > .inputWithIcon + .inputWithIcon {
+  margin-top: 0.65rem;
+}
+
+.fieldPanel > .fieldLabel + .textarea,
+.fieldPanel > .optionalChkLabel + .fieldLabel {
+  margin-top: 0.85rem;
+}
+
+.takkCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(2rem, 5vw, 2.75rem) clamp(1.25rem, 4vw, 2rem);
+  scroll-margin-top: calc(var(--site-header-offset) + 12px);
+}
+
+.takkProgress {
+  width: 100%;
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+.takkIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin: 0 auto;
+  border-radius: 999px;
+  border: 1px solid rgb(188 20 24 / 0.35);
+  background: rgb(188 20 24 / 0.08);
+  color: var(--accent);
+}
+
+.takkTitle {
+  margin: 1.1rem 0 0;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: clamp(1.45rem, 3vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  color: var(--foreground);
+}
+
+.takkLead {
+  margin: 0.65rem auto 0;
+  max-width: 28rem;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+.takkActions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.65rem;
+  width: 100%;
+  max-width: 16rem;
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+}
+
+@media (min-width: 480px) {
+  .takkActions {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: none;
+    width: auto;
+  }
+
+  .takkActions .flowBtnGhost,
+  .takkActions .flowBtnPrimary {
+    min-width: 9rem;
+  }
+}

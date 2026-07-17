@@ -1,0 +1,35 @@
+/* Hero band + flow-sider — showcase */
+
+.flowPage {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--background-base);
+  color: var(--foreground);
+}
+
+/* Steg i skjema-flyt — dinbil-layout, X Bilsenter farger */
+.flowPageSteps {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--background-base);
+  color: var(--foreground);
+}
+
+.heroBand {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: var(--layout-pad-x);
+  padding-bottom: clamp(32px, 5vw, 48px);
+  background: var(--background);
+}
+
+.heroBandSellStep {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--background);
+}

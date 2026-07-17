@@ -1,0 +1,166 @@
+/* Delt showcase-layout — alle offentlige sider */
+
+.flowPage {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.pageShell {
+  box-sizing: border-box;
+  width: 100%;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.pageMain {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--layout-shell-max);
+  margin-inline: auto;
+  padding-inline: var(--layout-pad-x);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Mørk sub-hero (vare-biler, tjenester) */
+.subHero {
+  position: relative;
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: 100%;
+  margin-inline: calc(50% - 50vw);
+  min-height: clamp(280px, 42vh, 420px);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--showcase-black);
+  color: var(--showcase-white);
+}
+
+.subHeroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.subHeroBg img {
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.subHeroShade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgb(0 0 0 / 0.25) 0%,
+    rgb(0 0 0 / 0.55) 100%
+  );
+  pointer-events: none;
+}
+
+.subHeroInner {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--layout-shell-max);
+  margin-inline: auto;
+  padding: 48px var(--layout-pad-x) 40px;
+}
+
+.subHeroEyebrow {
+  margin: 0 0 10px;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--showcase-red);
+}
+
+.subHeroTitle {
+  margin: 0;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.subHeroLead {
+  margin: 12px 0 0;
+  max-width: 32rem;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--showcase-light);
+}
+
+/* Trekk hero opp under transparent meny */
+.subHeroUnderNav {
+  margin-top: calc(-1 * var(--site-header-offset, 94px) - env(safe-area-inset-top, 0px));
+  padding-top: calc(var(--site-header-offset, 94px) + env(safe-area-inset-top, 0px));
+}
+
+.contentBand {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 48px 0 64px;
+  background: var(--background);
+}
+
+.contentBandInner {
+  box-sizing: border-box;
+  max-width: var(--layout-shell-max);
+  margin: 0 auto;
+  padding-inline: var(--layout-pad-x);
+}
+
+/* Grå sub-nav (Nissan desktop) */
+.subNavBar {
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--surface);
+}
+
+.subNavInner {
+  max-width: var(--layout-shell-max);
+  margin: 0 auto;
+  padding: 0 var(--layout-pad-x);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.subNavLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 18px;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--showcase-grey);
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.subNavLink:hover {
+  color: var(--foreground);
+}
+
+.subNavLinkActive {
+  color: var(--foreground);
+  border-bottom-color: var(--showcase-red);
+}

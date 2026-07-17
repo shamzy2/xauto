@@ -1,0 +1,290 @@
+/* Steg 2b — dekk + «Har bilen noen skader?» (samme uttrykk som steg 3) */
+
+.root {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 60vh;
+  padding: clamp(24px, 4vw, 48px) 0 clamp(40px, 6vw, 72px);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.inner {
+  max-width: var(--sell-flow-route-max);
+  margin: 0 auto;
+  padding-inline: var(--sell-flow-route-pad);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(28px, 4vw, 36px);
+}
+
+.stepBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(28px, 4vw, 36px);
+  transform-origin: top center;
+}
+
+.stepBodyIdle {
+  opacity: 0;
+  transform: scale(0.94) translateY(10px);
+  clip-path: inset(0 5% 18% 5% round 16px);
+}
+
+.stepBodyEnter {
+  animation: step2bIn 0.58s cubic-bezier(0.22, 0.95, 0.36, 1) forwards;
+}
+
+@keyframes step2bIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.94) translateY(10px);
+    clip-path: inset(0 5% 18% 5% round 16px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+    clip-path: inset(0 0 0 0 round 14px);
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: var(--sell-flow-route-max);
+  margin-inline: auto;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.cardHeader {
+  margin: 0 0 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cardTitle {
+  margin: 0;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: clamp(1.25rem, 3.2vw, 1.55rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--foreground);
+}
+
+.subMeta {
+  margin: 0.35rem 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-muted);
+  line-height: 1.45;
+}
+
+.form {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.formSection {
+  margin: 0;
+  padding: 0;
+  border: none;
+  min-width: 0;
+  display: block;
+  width: 100%;
+}
+
+.sectionLegend {
+  margin: 0 0 0.85rem;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  line-height: 1.3;
+}
+
+.radioStack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 14px;
+  background: var(--input-bg);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--foreground);
+  line-height: 1.35;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  transition:
+    border-color 0.12s ease-out,
+    background-color 0.12s ease-out;
+}
+
+.radioText {
+  display: block;
+  flex: 1;
+  min-width: 0;
+}
+
+.radioLabel:hover {
+  border-color: rgb(188 20 24 / 0.35);
+}
+
+.radioLabel:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.radioInput {
+  margin: 0.2rem 0 0;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+
+.formError {
+  margin: 0;
+  font-size: 14px;
+  color: #f87171;
+}
+
+.loadingMessage {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  color: var(--foreground);
+}
+
+.message {
+  margin: 0;
+  text-align: center;
+  color: #f87171;
+  font-size: 15px;
+  max-width: 36rem;
+  align-self: center;
+}
+
+.ctaRow {
+  width: 100%;
+  max-width: var(--sell-flow-route-max);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.backLink {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-muted);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 10px 4px;
+  flex-shrink: 0;
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.backLink:hover {
+  color: var(--accent);
+}
+
+.backLink:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.cta {
+  min-height: 50px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 14px;
+  background: var(--accent);
+  color: var(--showcase-white);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  min-width: min(12rem, 46%);
+  max-width: 20rem;
+  transition: background-color 0.15s ease-out;
+}
+
+.cta:hover {
+  background: var(--accent-hover);
+}
+
+.cta:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stepBodyIdle,
+  .stepBodyEnter {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+
+  .cta,
+  .radioLabel {
+    transition: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    padding-bottom: calc(
+      clamp(40px, 6vw, 72px) + 152px + env(safe-area-inset-bottom, 0px)
+    );
+  }
+
+  .ctaRow {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 35;
+    box-sizing: border-box;
+    padding: 10px var(--layout-pad-x, 16px) calc(10px + env(safe-area-inset-bottom, 0px));
+    background: rgb(255 255 255 / 0.92);
+    border-top: 1px solid rgb(255 255 255 / 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+  }
+}

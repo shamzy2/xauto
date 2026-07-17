@@ -1,0 +1,9 @@
+/* Forsiden — mørk flate */
+
+.homeBleed {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  background: var(--background);
+  color: var(--foreground);
+}

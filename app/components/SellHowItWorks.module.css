@@ -1,0 +1,91 @@
+/* Prosess-stripe — nummerert, uten illustrasjoner */
+
+.shell {
+  box-sizing: border-box;
+  width: 100%;
+  padding: clamp(48px, 8vw, 72px) 0 56px;
+  background: transparent;
+}
+
+.inner {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: min(var(--layout-max, 1240px), 100%);
+  margin: 0 auto;
+  padding-inline: var(--layout-pad-x);
+}
+
+.header {
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto 40px;
+}
+
+.title {
+  margin: 0 0 10px;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--foreground);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--showcase-grey);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-default);
+}
+
+.num {
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--showcase-red);
+  margin-bottom: 12px;
+}
+
+.stepTitle {
+  margin: 0 0 8px;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.35;
+  color: var(--foreground);
+}
+
+.stepBody {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--showcase-grey);
+}

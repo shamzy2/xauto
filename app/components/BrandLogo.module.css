@@ -1,0 +1,14 @@
+.logo {
+  display: block;
+  width: auto;
+  height: clamp(26px, 3.2vw, 34px);
+  max-width: min(240px, 52vw);
+}
+
+.onLight {
+  filter: brightness(0);
+}
+
+.onDark {
+  filter: none;
+}

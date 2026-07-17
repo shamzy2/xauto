@@ -1,0 +1,107 @@
+.vehicleCard {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow:
+    0 1px 0 rgb(0 0 0 / 0.03) inset,
+    0 16px 40px rgb(0 0 0 / 0.06);
+  overflow: hidden;
+}
+
+.header {
+  padding: 1.15rem 1.35rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.headerTop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: var(--foreground);
+}
+
+.variant {
+  margin: 0.25rem 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-muted);
+}
+
+.regBadge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 0.75rem;
+  border: 1px solid var(--border-default);
+  border-radius: 999px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--foreground);
+  background: rgb(0 0 0 / 0.03);
+}
+
+.source {
+  margin: 0.55rem 0 0;
+  font-size: 11px;
+  color: var(--ink-muted);
+}
+
+.body {
+  padding: 1.15rem 1.35rem 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.95rem 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.spec {
+  min-width: 0;
+}
+
+.specLabel {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--ink-muted);
+}
+
+.specValue {
+  margin: 0.2rem 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--foreground);
+}
+
+.footerNote {
+  margin: 1rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}

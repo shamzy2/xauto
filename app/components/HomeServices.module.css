@@ -1,0 +1,190 @@
+/* Referanse-layout: sentrert intro → 4 ikoner */
+
+.shell {
+  box-sizing: border-box;
+  width: 100%;
+  padding: clamp(56px, 7vw, 80px) 0 clamp(64px, 8vw, 88px);
+  background: transparent;
+  color: var(--foreground);
+}
+
+.page {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--layout-shell-max);
+  margin: 0 auto;
+  padding-inline: var(--layout-pad-x);
+}
+
+.intro {
+  max-width: 36rem;
+  margin: 0 auto clamp(40px, 5vw, 52px);
+  text-align: center;
+}
+
+.introTitle {
+  margin: 0;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--foreground);
+}
+
+.coreGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 40px);
+}
+
+.coreItem {
+  min-width: 0;
+}
+
+.coreItemInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.coreCopy {
+  min-width: 0;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 14px;
+}
+
+.lottieIcon {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.coreTitle {
+  margin: 0 0 8px;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--foreground);
+}
+
+.coreTag {
+  margin: 0;
+  max-width: 16rem;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+
+@media (max-width: 1023px) {
+  .coreGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .coreItemInner {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 14px;
+    padding: 16px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 10px 32px rgb(0 0 0 / 0.05);
+  }
+
+  .iconWrap {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 0;
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
+    background: rgb(0 0 0 / 0.02);
+  }
+
+  .lottieIcon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .coreTitle {
+    margin-bottom: 4px;
+  }
+
+  .coreTag {
+    max-width: none;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 639px) {
+  .shell {
+    padding-top: 44px;
+    padding-bottom: 52px;
+  }
+
+  .intro {
+    margin-bottom: 28px;
+    text-align: left;
+  }
+
+  .coreGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow:
+      0 1px 0 rgb(255 255 255 / 0.9) inset,
+      0 14px 36px rgb(0 0 0 / 0.06);
+    overflow: hidden;
+  }
+
+  .coreItem + .coreItem {
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .coreItemInner {
+    gap: 16px;
+    padding: 18px 16px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .iconWrap {
+    width: 52px;
+    height: 52px;
+  }
+
+  .lottieIcon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .coreTitle {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+}
