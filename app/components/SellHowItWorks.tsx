@@ -28,17 +28,17 @@ const stepsInnbytte: readonly Step[] = [
   {
     num: "01",
     title: "Fyll ut innbytteskjemaet",
-    body: "Beskriv bilen du ønsker å bytte inn, inkludert eventuelle skader og mangler.",
+    body: "Oppgi informasjon om bilen du ønsker å bytte inn, inkludert kilometerstand, utstyr og eventuelle skader eller mangler.",
   },
   {
     num: "02",
-    title: "Uforpliktende tilbud",
-    body: "Du mottar et innbyttetilbud innen 24 timer etter at vi har vurdert informasjonen.",
+    title: "Motta et uforpliktende tilbud",
+    body: "Vi vurderer bilen din og sender deg et uforpliktende innbyttetilbud, normalt innen 24 timer.",
   },
   {
     num: "03",
-    title: "Trygt innbytte",
-    body: "Vi håndterer innbytte og heftelser. Oppgjør skjer smidig når du kjøper bil hos oss.",
+    title: "Lever bilen og fullfør innbyttet",
+    body: "Når du kjøper bil hos oss, leverer du inn bilen din. Vi ordner oppgjøret og innfrir eventuelle heftelser.",
   },
 ];
 

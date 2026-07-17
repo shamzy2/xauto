@@ -12,7 +12,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Våre biler",
   description:
-    "Se biler til salgs og start innbytte: oppgi reg.nr. og kilometer, og fortsett til innbytteskjemaet hos X Auto på Fetsund.",
+    "Finner du likevel ikke drømmebilen, er sjansen stor for at vi finner den gjennom vårt unike kontaktnettverk. Se lageret hos X Auto på Fetsund.",
 };
 
 export default function VareBilerPage() {
@@ -37,7 +37,8 @@ export default function VareBilerPage() {
             Våre biler
           </h1>
           <p className={showcase.subHeroLead}>
-            Se lageret vårt og start innbytte med reg.nr og kilometerstand.
+            Finner du likevel ikke drømmebilen nedenfor, er sjansen stor for at vi
+            finner den gjennom vårt unike kontaktnettverk.
           </p>
         </div>
       </section>

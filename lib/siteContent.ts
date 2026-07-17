@@ -42,17 +42,17 @@ export const reviews = [
   {
     quote:
       "Selger ordnet alt fra A til Å. Enkel prosess, hyggelig oppfølging etter handelen.",
-    author: "Joachim R.",
+    author: "Martin K.",
   },
   {
     quote:
       "Bilen er som avtalt. Grei og imøtekommende selger — anbefales videre.",
-    author: "Ronny M.",
+    author: "Heidi S.",
   },
   {
     quote:
       "Fornøyd hittil. Handler gjerne bil av dere igjen ved en senere anledning.",
-    author: "Stig A.",
+    author: "Thomas L.",
   },
 ] as const;
 

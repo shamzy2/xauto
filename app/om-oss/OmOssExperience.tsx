@@ -163,10 +163,6 @@ export function OmOssExperience() {
               </li>
             ))}
           </ol>
-
-          <p className={styles.aboutMeta}>
-            <span>{site.address.formatted}</span>
-          </p>
         </div>
       </section>
 

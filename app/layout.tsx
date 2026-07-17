@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     "bilgaranti",
   ],
   icons: {
-    icon: [{ url: "/safavicon.svg", type: "image/svg+xml" }],
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
   openGraph: {
     type: "website",
